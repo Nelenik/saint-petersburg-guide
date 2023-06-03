@@ -1,0 +1,12 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/swiper/swiper-bundle.min.css';//swiper.js styles
+@import "../../node_modules/wowjs/css/libs/animate.css";//animate.css
+@import "./scss-parts/base";
+@import "./scss-parts/common";
+@import "./scss-parts/site-parts/header-hero";
+@import './scss-parts/site-parts/about-town';
+@import './scss-parts/site-parts/history';
+@import './scss-parts/site-parts/sights';
+@import './scss-parts/site-parts/budget';
+@import './scss-parts/site-parts/map';
+@import './scss-parts/site-parts/footer';

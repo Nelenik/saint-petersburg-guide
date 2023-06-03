@@ -1,0 +1,80 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // min-height: 76px;
+
+
+  &__container {}
+
+  &__menu {}
+}
+
+.menu {
+  padding: 32px 0 25px;
+  border-bottom: 1px solid $extra-dark-0-15;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+
+  &__item {
+    max-width: 193px;
+  }
+
+  &__link {
+    font-size: 1rem;
+    line-height: 118.75%; /* 19px/16 */
+    color: $extra-dark;
+    letter-spacing: 0.015rem;
+    transition: color 0.3s ease;
+    outline: none;
+
+    &:hover:not(:active), &:focus {
+      color: $primary-dark;
+    }
+
+    &:active {
+      color: $primary-light;
+    }
+  }
+}
+
+
+.hero {
+  min-height: 732px;
+  padding-top: 300px;
+  background-image: url("@img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+  }
+
+  &__title {
+    @include resetMg;
+    margin-bottom: 5px;
+    font-family: 'Prata', serif;
+    font-size: 3rem;
+    line-height: 135.416667%; /* 65px/48 */
+    color: $primary-dark;
+
+  }
+
+  &__descr {
+    @include resetMg;
+    font-size: 1.5rem;
+    line-height: 116.666667%; /* 28px/24 */
+    letter-spacing: 0.02rem;
+  }
+}

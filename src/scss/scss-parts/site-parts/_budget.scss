@@ -1,0 +1,68 @@
+.budget {
+  padding-top: 124px;
+  padding-bottom: 240px;
+  background-color: $bg-beige;
+  &__container {}
+
+  &__title {
+    margin-bottom: 57px;
+  }
+
+  &__descr {
+    width: 57.482993%; /* 676px/1176 */
+    margin-left: auto;
+    margin-bottom: 200px;
+    font-size: 1.125rem;
+    line-height: 166.666667%; /* 30px/18 */
+  }
+
+  &__text {
+    @include resetMg;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__item {
+    flex: 1 0 calc((100% - 24px*3)/4);
+    padding-top: 132px;
+    text-align: center;
+    background-position: center top 42px;
+    background-repeat: no-repeat;
+
+
+    &--living {
+      background-image: url("@img/living.svg");
+    }
+
+    &--meals {
+      background-image: url("@img/meals.svg");
+    }
+
+    &--museum {
+      background-image: url("@img/museum.svg");
+    }
+
+    &--souvenir {
+      background-image: url("@img/souvenir.svg");
+    }
+  }
+
+
+  &__position {
+    @include resetMg;
+    margin-bottom: 16px;
+    font-size: 1.125rem;
+    line-height: 144.444444%; /* 26px/18 */
+    font-weight: 300;
+  }
+
+  &__price {
+
+    font-family: "Prata", serif;
+    font-size: 1.375rem;
+    line-height: 118.181818%; /* 26px/22 */
+  }
+}

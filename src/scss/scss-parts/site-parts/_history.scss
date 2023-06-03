@@ -1,0 +1,143 @@
+.history {
+  background-color: $bg-beige;
+  padding-top: 124px;
+  padding-bottom: 189px;
+
+  &__container {}
+
+  &__title {
+    @include resetMg;
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: -2px;
+    text-align: center;
+
+    &--right {
+      align-self: flex-end;
+      padding-right: 176px;
+      width: 50.1%;
+    }
+
+    &--left {
+      padding-left: 176px;
+      width: 50%;
+    }
+
+    &:first-child {
+      .history__subtitle {
+        border-left-color: transparent;
+      }
+    }
+
+    &:last-child {
+      .history__descr {
+        border-left-color: transparent;
+      }
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 101px;
+    // max-width: 250px;
+    @include resetMg;
+    font-family: 'Prata', serif;
+    font-size: 1.125rem;
+    line-height: 133.333333%;
+    /* 24px/18 */
+    border-bottom: 1px solid $primary-light;
+    vertical-align: bottom;
+    transform: translateY(2px);
+
+    &--left {
+      padding: 12px 33px 12px 13px;
+      border-right: 1px solid $primary-light;
+    }
+
+    &--right {
+      padding: 12px 21px 12px 41px;
+      border-left: 1px solid $primary-light;
+    }
+  }
+
+  &__descr {
+    @include resetMg;
+    min-height: 101px;
+    // max-width: max-content;
+    font-weight: 300;
+    line-height: 137.5%;
+    /* 22px/16 */
+    font-size: 1rem;
+
+    &--left {
+      padding: 12px 33px 0px 13px;
+      border-right: 1px solid $primary-light;
+    }
+
+    &--right {
+      padding: 12px 21px 0px 41px;
+      border-left: 1px solid $primary-light;
+    }
+  }
+
+  &__img-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 176px;
+    aspect-ratio: 1/1;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid $primary-light;
+    &--left{
+      left: 0;
+    }
+    &--right{
+      right: 0;
+    }
+  }
+
+  &__img {
+
+    display: block;
+    clip-path: circle(75px at center);
+  }
+}
+
+.number {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  aspect-ratio: 1/1;
+  font-family: "Prata",serif;
+  font-size: 1.125rem;
+  line-height: 100%; /* 18px/18 */
+  color: $bg-white;
+  border-radius: 50%;
+  background-color: $primary-light;
+
+  &--left {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+  }
+
+  &--right {
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%)
+  }
+}

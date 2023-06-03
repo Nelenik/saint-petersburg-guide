@@ -1,0 +1,155 @@
+.about {
+  padding-top: 200px;
+  background-color: $bg-beige;
+
+  &__title {
+    margin:0 auto 57px;
+    max-width: 1176px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 56.5% auto;
+    grid-template-rows: auto;
+    gap: 124px;
+  }
+
+  &__grid-1 {
+    min-width: 0;
+  }
+
+  &__grid-2 {
+    min-width: 0;
+  }
+
+  &__grid-3 {
+    grid-column: span 2;
+  }
+
+
+  &__bottom{
+    min-height: 576px;
+    padding-top:191px;
+    padding-bottom: 220px;
+    background-color: $bg-white;
+    background-image: url('@img/about-horse-bg.png'), url('@img/about-vase-bg.png');
+    background-repeat: no-repeat;
+    background-position: right 182px top 51px, left 174px bottom 34px;
+    background-size:175px 267px, 240px 315px;
+  }
+
+  &__descr {
+    @include resetMg;
+    max-width: 95%;
+    font-family: "Prata", serif;
+    font-size: 2rem;
+    line-height: 168.75%; /* 54px/32 */
+    letter-spacing: 0.009rem;
+  }
+}
+
+.img-swiper {
+  box-sizing: border-box;
+  width: 100%;
+
+  &__slide {
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  .swiper-pagination-horizontal {
+    .swiper-pagination-bullet {
+      margin: 0 10px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    // margin: 0 10px;
+    width: 32px;
+    height: 2px;
+    opacity: 1;
+    background-color: $bg-white;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $primary-light;
+  }
+}
+
+.text-swiper-wrap {
+  position: relative;
+  padding-bottom: 200px;
+  padding-right: 95px;
+}
+.text-swiper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+
+  &__slide {
+    box-sizing: inherit;
+  }
+
+  &__text {
+    @include resetMg;
+    font-size: 1.125rem;
+    line-height: 144.444444%;
+    /* 26px/18 */
+    width: 83%;
+  }
+
+
+}
+
+.text-swiper-nav {
+  z-index: 1;
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  gap: 24px;
+}
+
+.text-swiper-btn {
+  position: relative;
+  width: 78px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  border: 1px solid $primary-dark;
+  transition: border-color 0.4s ease;
+  &:hover:not(:active),
+  &:focus-visible {
+    border-color: $primary-light;
+    svg {
+      stroke: $primary-light;
+    }
+  }
+  &:active {
+    border-color: $extra-dark;
+    svg {
+      stroke: $extra-dark;
+    }
+  }
+
+  &--prev {}
+
+  &--next {}
+}
+
+.text-swiper-btn-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 37px;
+  transform: translate(-50%, -50%);
+  fill: none;
+  stroke: $primary-dark;
+  transition: stroke 0.4s ease;
+}

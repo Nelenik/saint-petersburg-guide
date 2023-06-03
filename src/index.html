@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html-parts/head.html', {
+"title": "Путеводитель по Санкт-Петербургу",
+"stylesPath": "css/index.css",
+"jsPath": "js/index.js",
+})
+  <body>
+  @@include('html-parts/header.html', {})
+  <main>
+    @@include('html-parts/hero.html', {})
+    @@include('html-parts/about-town.html', {})
+    @@include('html-parts/history.html', {})
+    @@include('html-parts/sights.html', {})
+    @@include('html-parts/budget.html', {})
+    @@include('html-parts/map.html', {})
+    <!-- import of html parts -->
+  </main>
+  @@include('html-parts/footer.html', {})
+  </body>
+
+</html>
