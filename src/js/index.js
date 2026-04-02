@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Swiper, { Navigation, Pagination, Autoplay, Controller } from 'swiper';
 import { WOW } from 'wowjs';
 
@@ -40,7 +41,7 @@ marker.innerHTML = `<svg width="22" height="57" viewBox="0 0 22 57" fill="none" 
 </svg>`;
 ymaps3.ready.then(init);
 function init() {
-	const map = new ymaps3.YMap(
+	new ymaps3.YMap(
 		document.getElementById('map'),
 		{
 			location: {
